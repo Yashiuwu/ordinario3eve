@@ -1,20 +1,23 @@
+
+
 import 'package:flutter/material.dart';
-import 'available_items_screen.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'widgets/crossword_puzzle_app.dart';
 
 void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Tienda de Ropa',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+  runApp(
+    ProviderScope(
+      child: MaterialApp(
+        title: 'Crossword Puzzle',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          useMaterial3: true,
+          colorSchemeSeed: Colors.blueGrey,
+          brightness: Brightness.light,
+        ),
+        home: CrosswordPuzzleApp(),
       ),
-      home: AvailableItemsScreen(),
-    );
-  }
+    ),
+  );
 }
