@@ -1,0 +1,25 @@
+name: tienda_de_ropa
+description: Una aplicación de tienda de ropa con Flutter.
+publish_to: "none" # Si no quieres publicar el paquete.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Añade aquí otras dependencias que necesites.
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
